@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, only: [:seller, :new, :create, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_filter :check_user, only: [:edit, :update, :destroy]
 
   # GET /listings
@@ -81,4 +81,5 @@ def check_user
       end
     end
 
+    
 
