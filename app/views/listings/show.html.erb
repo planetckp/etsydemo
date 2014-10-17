@@ -8,7 +8,9 @@
 <h3><%= @listing.name %></h3>
 <p><%= number_to_currency(@listing.price, unit:"Rs.") %></p>
 <p><%= @listing.description %> </p>
-</div>
+
+<%= link_to "Buy It Now", new_listing_order_path(@listing), class: "btn btn-primary" %>
+
 </div>
 
 <% if current_user == @listing.user %>
